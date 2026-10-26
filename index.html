@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Uthman Ayodeji Dabiri · Senior Backend Engineer</title>
+<meta name="description" content="Senior Backend Engineer building payment, lending and banking systems in C#/.NET for regulated fintech: Kafka, gRPC, Temporal, Kubernetes, Azure. Open to remote roles and relocation." />
+<meta name="author" content="Uthman Ayodeji Dabiri" />
+<meta name="color-scheme" content="dark light" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Uthman Ayodeji Dabiri · Senior Backend Engineer" />
+<meta property="og:description" content="Backend systems that move real money: .NET, Kafka, gRPC, Temporal, Kubernetes, Azure. 10+ years in regulated fintech." />
+<meta property="og:url" content="https://dabirideji.github.io/" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/115591934?v=4" />
+<meta name="twitter:card" content="summary" />
+<link rel="canonical" href="https://dabirideji.github.io/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='%2338bdf8'%3EUD%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Uthman Ayodeji Dabiri",
+  "jobTitle": "Senior Backend Engineer",
+  "description": "Backend engineer building payment, lending and banking systems in C#/.NET for regulated fintech.",
+  "url": "https://dabirideji.github.io/",
+  "image": "https://avatars.githubusercontent.com/u/115591934?v=4",
+  "email": "mailto:dabirideji@gmail.com",
+  "homeLocation": { "@type": "Place", "name": "Africa" },
+  "worksFor": { "@type": "Organization", "name": "PeerPay Digital Assets", "url": "https://www.peerpaynetwork.com/" },
+  "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Azure Developer Associate (AZ-204)" },
+  "knowsAbout": ["C#", ".NET", "ASP.NET Core", "Microservices", "Kafka", "gRPC", "Temporal", "Kubernetes", "Azure", "AWS", "PostgreSQL", "Payments", "Fintech", "Distributed systems", "OpenTelemetry"],
+  "sameAs": ["https://www.linkedin.com/in/uthman-dabiri-576339288", "https://github.com/dabirideji"]
+}
+</script>
+<style>
+  :root {
+    --bg: #070b14;
+    --bg-2: #0b1220;
+    --card: rgba(255, 255, 255, 0.035);
+    --card-hover: rgba(255, 255, 255, 0.06);
+    --line: rgba(148, 163, 184, 0.16);
+    --text: #e6edf6;
+    --muted: #9aa8bd;
+    --faint: #6b7a90;
+    --accent: #38bdf8;
+    --accent-2: #a78bfa;
+    --good: #34d399;
+    --chip: rgba(56, 189, 248, 0.09);
+    --chip-line: rgba(56, 189, 248, 0.25);
+    --on-accent: #04111f;
+    --shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
+    --radius: 16px;
+    --max: 1120px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f9fc;
+      --bg-2: #eef3f9;
+      --card: #ffffff;
+      --card-hover: #ffffff;
+      --line: rgba(15, 23, 42, 0.1);
+      --text: #0f172a;
+      --muted: #475569;
+      --faint: #64748b;
+      --accent: #0369a1;
+      --accent-2: #6d28d9;
+      --good: #047857;
+      --chip: rgba(3, 105, 161, 0.07);
+      --chip-line: rgba(3, 105, 161, 0.22);
+      --on-accent: #ffffff;
+      --shadow: 0 18px 40px -22px rgba(15, 23, 42, 0.25);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+  /* Top bar */
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    backdrop-filter: saturate(160%) blur(12px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { font-weight: 800; letter-spacing: -0.02em; color: var(--text); }
+  .brand span { color: var(--accent); }
+  nav.links { display: flex; gap: 22px; font-size: 14px; }
+  nav.links a { color: var(--muted); }
+  nav.links a:hover { color: var(--text); text-decoration: none; }
+
+  /* Hero */
+  .hero { position: relative; padding: 96px 0 72px; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: -40% -10% auto -10%; height: 640px; z-index: -1;
+    background:
+      radial-gradient(600px 300px at 20% 30%, rgba(56, 189, 248, 0.18), transparent 60%),
+      radial-gradient(520px 280px at 80% 20%, rgba(167, 139, 250, 0.16), transparent 60%);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 48px; align-items: center; }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--good);
+    border: 1px solid color-mix(in srgb, var(--good) 40%, transparent);
+    background: color-mix(in srgb, var(--good) 10%, transparent);
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 22px;
+  }
+  .status i { width: 8px; height: 8px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 4px color-mix(in srgb, var(--good) 25%, transparent); }
+  h1 { font-size: clamp(38px, 5.6vw, 64px); line-height: 1.04; letter-spacing: -0.035em; margin: 0 0 14px; font-weight: 800; }
+  h1 .grad { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .role { font-size: clamp(17px, 2vw, 21px); color: var(--muted); margin: 0 0 22px; font-weight: 500; }
+  .lede { font-size: 17px; color: var(--muted); max-width: 640px; margin: 0 0 30px; }
+  .lede b { color: var(--text); font-weight: 600; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px;
+    padding: 12px 20px; border-radius: 12px; border: 1px solid var(--line); color: var(--text); background: var(--card);
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); background: var(--card-hover); border-color: var(--chip-line); }
+  /* Text colour is a token: white on the dark theme's light-blue gradient is 2.1:1. */
+  .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: 0; color: var(--on-accent); }
+  .btn svg { width: 18px; height: 18px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 26px; font-size: 14px; color: var(--faint); }
+  .meta span { display: inline-flex; align-items: center; gap: 6px; }
+
+  .avatar-card {
+    border: 1px solid var(--line); border-radius: 24px; padding: 22px; background: var(--card); box-shadow: var(--shadow);
+  }
+  .avatar-card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; display: block; }
+  .avatar-card .cert {
+    margin-top: 16px; display: flex; gap: 12px; align-items: center; font-size: 14px; color: var(--muted);
+  }
+  .avatar-card .cert b { color: var(--text); display: block; font-size: 14.5px; }
+  .ms { width: 34px; height: 34px; flex: none; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+  .ms i:nth-child(1) { background: #f25022; } .ms i:nth-child(2) { background: #7fba00; }
+  .ms i:nth-child(3) { background: #00a4ef; } .ms i:nth-child(4) { background: #ffb900; }
+
+  /* Metrics */
+  .metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin: 8px 0 0; }
+  .metric { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; background: var(--card); }
+  .metric b { display: block; font-size: 28px; letter-spacing: -0.03em; font-weight: 800; }
+  .metric span { font-size: 13.5px; color: var(--muted); line-height: 1.45; display: block; margin-top: 4px; }
+
+  /* Sections */
+  section { padding: 76px 0 0; }
+  .eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 8px; }
+  h2 { font-size: clamp(26px, 3.2vw, 36px); letter-spacing: -0.025em; margin: 0 0 28px; font-weight: 800; }
+
+  /* Timeline */
+  .timeline { position: relative; display: grid; gap: 18px; }
+  .job { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 24px 26px; transition: border-color .15s ease; }
+  .job:hover { border-color: var(--chip-line); }
+  .job.current { border-color: color-mix(in srgb, var(--good) 45%, transparent); }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .job h3 { margin: 0; font-size: 19px; letter-spacing: -0.01em; }
+  .job h3 a { color: var(--text); }
+  .job h3 a:hover { color: var(--accent); text-decoration: none; }
+  .job .at { color: var(--muted); font-weight: 500; }
+  .when { font-size: 13.5px; color: var(--faint); white-space: nowrap; }
+  .when.now { color: var(--good); font-weight: 600; }
+  .ctx { color: var(--muted); font-size: 15px; margin: 6px 0 12px; }
+  .job ul { margin: 0 0 14px; padding-left: 20px; }
+  .job li { margin: 4px 0; }
+  .job li b { font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+  .chip {
+    font-size: 12.5px; padding: 4px 10px; border-radius: 999px; background: var(--chip); border: 1px solid var(--chip-line);
+    color: var(--text); white-space: nowrap;
+  }
+  .compact { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .compact .job { padding: 20px 22px; }
+  .compact .job ul { margin-bottom: 12px; }
+  details.earlier { border: 1px dashed var(--line); border-radius: var(--radius); padding: 16px 22px; color: var(--muted); }
+  details.earlier summary { cursor: pointer; color: var(--text); font-weight: 600; }
+  details.earlier ul { margin: 12px 0 0; padding-left: 20px; }
+
+  /* Products */
+  .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .product {
+    display: block; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; background: var(--card); color: var(--text);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .product:hover { transform: translateY(-2px); border-color: var(--chip-line); text-decoration: none; }
+  .product .tag { font-size: 12px; color: var(--accent); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .product h3 { margin: 6px 0 6px; font-size: 18px; }
+  .product p { margin: 0 0 12px; color: var(--muted); font-size: 14.5px; }
+  .product .url { font-size: 13px; color: var(--faint); }
+  .product .url::after { content: " ↗"; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .skill-group { border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; background: var(--card); }
+  .skill-group h3 { margin: 0 0 12px; font-size: 15px; color: var(--muted); font-weight: 600; letter-spacing: .02em; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .panel { border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; background: var(--card); }
+  .panel h3 { margin: 0 0 10px; font-size: 17px; }
+  .panel ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  .panel li { margin: 5px 0; }
+  .panel li b { color: var(--text); }
+
+  /* Contact */
+  .contact {
+    margin: 76px 0 0; border: 1px solid var(--line); border-radius: 24px; padding: 44px 36px; text-align: center;
+    background:
+      radial-gradient(500px 200px at 20% 0%, rgba(56, 189, 248, 0.12), transparent 70%),
+      radial-gradient(500px 200px at 80% 100%, rgba(167, 139, 250, 0.12), transparent 70%), var(--card);
+  }
+  .contact h2 { margin-bottom: 10px; }
+  .contact p { color: var(--muted); margin: 0 auto 26px; max-width: 560px; }
+  .contact .cta { justify-content: center; }
+  footer { padding: 40px 0 48px; color: var(--faint); font-size: 13.5px; text-align: center; }
+
+  @media (max-width: 900px) {
+    .hero { padding: 56px 0 48px; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .avatar-card { max-width: 340px; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .metrics .metric:last-child { grid-column: span 2; }
+    .compact, .products, .skills, .two { grid-template-columns: 1fr; }
+    nav.links { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Uthman Ayodeji Dabiri, home">Uthman<span>.</span>dev</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="status"><i aria-hidden="true"></i> Open to work · remote or relocation</div>
+        <h1>Uthman Ayodeji <span class="grad">Dabiri</span></h1>
+        <p class="role">Senior Backend Engineer · .NET, Distributed Systems &amp; Fintech</p>
+        <p class="lede">I build the backend systems that move money: <b>payment processing, interbank lending, KYC and
+          bank integrations</b>, in C#/.NET, for regulated fintech. For <b>10+ years</b> I've designed event-driven
+          microservices on <b>Kafka, gRPC and Temporal</b> and run them on <b>Kubernetes</b> in Azure and AWS.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:dabirideji@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email me
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/uthman-dabiri-576339288" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.86V21H9z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/dabirideji" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a class="btn" href="https://wa.me/2348142546500" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.1-.5l.38-.44c.12-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="meta">
+          <span>🌍 Based in Africa</span>
+          <span>💼 Remote worldwide · open to relocation</span>
+          <span>🏦 Fintech · payments · banking</span>
+        </div>
+      </div>
+      <div class="avatar-card">
+        <img src="https://avatars.githubusercontent.com/u/115591934?v=4" alt="Portrait of Uthman Ayodeji Dabiri" width="460" height="460" />
+        <div class="cert">
+          <div class="ms" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div><b>Microsoft Certified</b>Azure Developer Associate (AZ-204)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="metrics" role="list">
+      <div class="metric" role="listitem"><b>10+ yrs</b><span>building backend and distributed systems</span></div>
+      <div class="metric" role="listitem"><b>10,000+</b><span>transactions per minute, load-tested Kafka payment processing</span></div>
+      <div class="metric" role="listitem"><b>&lt; 20 ms</b><span>API responses with gRPC and event sourcing</span></div>
+      <div class="metric" role="listitem"><b>10+</b><span>bank and payment integrations</span></div>
+      <div class="metric" role="listitem"><b>99.9%</b><span>uptime on the platform I build for today</span></div>
+    </div>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <p class="eyebrow">Experience</p>
+      <h2 id="exp-h">Where I've shipped</h2>
+      <div class="timeline">
+        <article class="job current">
+          <div class="job-head">
+            <h3>Senior Backend Engineer <span class="at">· <a href="https://www.peerpaynetwork.com/" rel="noopener">PeerPay Digital Assets</a></span></h3>
+            <span class="when now">01/2025 - present</span>
+          </div>
+          <p class="ctx">Automated financial commitment settlement (AFCS): interbank lending, co-signed credit and loan recovery.</p>
+          <ul>
+            <li>Own four services of the AFCS backend (onboarding, unified bank integration, notifications, credit disbursement) on <b>.NET 8, Docker and Kubernetes (AKS)</b></li>
+            <li>Built real-time <b>NIBSS</b> integration for BVN verification, KYC automation and credit history, with retries and circuit breakers</li>
+            <li>Designed the loan-mandate lifecycle as a <b>state machine</b> with dual-signer OTP consent and institution attestation, advanced by <b>Kafka</b> events</li>
+            <li>Built idempotent registration that resolves concurrent-registration races at the database level</li>
+            <li>Hardened the auth and onboarding paths and cut a 20+ second request hang to about <b>0.4 s</b></li>
+          </ul>
+          <div class="chips"><span class="chip">.NET 8</span><span class="chip">Kafka</span><span class="chip">AKS</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">NIBSS / BVN</span></div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3>CTO &amp; Solutions Architect <span class="at">· <a href="https://swisspay.africa/" rel="noopener">SwissPay</a> · Contract</span></h3>
+            <span class="when">2025 - 2026</span>
+          </div>
+          <p class="ctx">Tap-to-pay platform that turns a smartphone into a payment terminal: NFC, QR, BLE and offline payments.</p>
+          <ul>
+            <li>Owned the architecture for 1,000-10,000 merchants and users: a 7-project <b>Clean Architecture / DDD</b> solution on .NET 9</li>
+            <li><b>Kafka</b> payment processing load-tested at <b>10,000+ transactions per minute</b> with sub-second latency; APIs under <b>20 ms</b> with gRPC and event sourcing</li>
+            <li>Unified six payment and banking providers behind one API, with bank-code reconciliation that prevents misrouted transfers</li>
+            <li>Designed zero-downtime encryption-key rotation, and cut CI/CD from 4-6 hours to 20-30 minutes (about 10x)</li>
+          </ul>
+          <div class="chips"><span class="chip">.NET 9</span><span class="chip">Kafka</span><span class="chip">gRPC</span><span class="chip">Event sourcing</span><span class="chip">Cassandra</span><span class="chip">Paystack</span><span class="chip">Flutterwave</span><span class="chip">Stripe</span><span class="chip">GitHub Actions</span></div>
+        </article>
+
+        <div class="compact">
+          <article class="job">
+            <div class="job-head">
+              <h3>Solutions Architect &amp; Project Lead <span class="at">· <a href="http://letsmeet.chat/" rel="noopener">LetsMeet</a></span></h3>
+              <span class="when">03/2025 - 11/2025</span>
+            </div>
+            <p class="ctx">Social and events platform · Contract</p>
+            <ul>
+              <li>Real-time .NET backend with an event-driven <b>SignalR</b> chat hub</li>
+              <li><b>PostgreSQL spatial</b> matchmaking with Azure Maps</li>
+              <li><b>Stripe</b> payments with multi-secret webhook verification</li>
+            </ul>
+            <div class="chips"><span class="chip">SignalR</span><span class="chip">PostgreSQL</span><span class="chip">Azure Maps</span><span class="chip">Stripe</span></div>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Backend &amp; Mobile Engineer <span class="at">· <a href="https://useriapp.com/" rel="noopener">Useri</a></span></h3>
+              <span class="when">2026</span>
+            </div>
+            <p class="ctx">Agro-logistics platform · Contract</p>
+            <ul>
+              <li>.NET backend, admin portal and <b>Flutter</b> app with on-device OCR, Gemini and over-the-air updates</li>
+              <li><b>Paystack</b> webhook validation with multiple secrets</li>
+            </ul>
+            <div class="chips"><span class="chip">Flutter</span><span class="chip">.NET</span><span class="chip">Gemini</span><span class="chip">Sentry</span><span class="chip">Paystack</span></div>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Backend Engineer <span class="at">· Coronation Registrars (via Gapplus)</span></h3>
+              <span class="when">2023 - 2025</span>
+            </div>
+            <p class="ctx">Capital-markets registrar platforms · Contract</p>
+            <ul>
+              <li>Registrar API gateway, <a href="https://shareholderlive.coronationregistrars.com/" rel="noopener">ShareholderLive</a> and <a href="https://issuerlive.coronationregistrars.com/" rel="noopener">IssuerLive</a></li>
+              <li>Virtual AGM platform with live streaming and secure voting</li>
+              <li>Registrar-as-a-Service ESOP edition delivered for Access Bank</li>
+            </ul>
+            <div class="chips"><span class="chip">ASP.NET Core</span><span class="chip">API gateway</span><span class="chip">SQL Server</span><span class="chip">JavaScript</span></div>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Backend Developer <span class="at">· DeCloud23 Tech · <a href="https://www.zheeta.com/" rel="noopener">ZHEETA</a></span></h3>
+              <span class="when">05/2024 - 12/2025</span>
+            </div>
+            <p class="ctx">Social platform API · Contract</p>
+            <ul>
+              <li>Age verification on profile creation and an event verification workflow</li>
+              <li>Multi-currency payouts, with <b>OpenTelemetry</b> tracing and metrics</li>
+            </ul>
+            <div class="chips"><span class="chip">.NET</span><span class="chip">OpenTelemetry</span><span class="chip">Prometheus</span></div>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Lead Developer <span class="at">· <a href="https://virtual360mevtech.com/" rel="noopener">Virtual360 MevTech</a></span></h3>
+            </div>
+            <p class="ctx">E-learning platform with free and premium courses</p>
+            <ul>
+              <li>Modular <b>.NET 8</b> platform with Stripe subscriptions and content delivered through Azure and a CDN, plus web and Flutter clients</li>
+            </ul>
+            <div class="chips"><span class="chip">.NET 8</span><span class="chip">Azure CDN</span><span class="chip">Stripe</span><span class="chip">Flutter</span></div>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Instructor &amp; Mentor <span class="at">· <a href="https://codeweb.com.ng/" rel="noopener">Codeweb Coding Academy</a></span></h3>
+              <span class="when">12/2021 - 04/2024</span>
+            </div>
+            <p class="ctx">Coding academy</p>
+            <ul>
+              <li>Taught the backend .NET curriculum and mentored junior and intermediate developers</li>
+            </ul>
+            <div class="chips"><span class="chip">.NET</span><span class="chip">Mentoring</span></div>
+          </article>
+        </div>
+
+        <details class="earlier">
+          <summary>Earlier roles (2015 - 2022)</summary>
+          <ul>
+            <li><b>Software Developer</b>, Nigerian Communications Commission (2022)</li>
+            <li><b>Software Engineer</b>, CompuClick Software (2018 - 2020): payments, logistics and inventory/POS apps</li>
+            <li><b>Developer &amp; Consultant</b>, Codeweb Project Solutions (2015 - 2018): client delivery and mentoring</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-h">
+      <p class="eyebrow">Live products</p>
+      <h2 id="work-h">Platforms I've helped build</h2>
+      <div class="products">
+        <a class="product" href="https://www.peerpaynetwork.com/" rel="noopener"><span class="tag">Fintech · lending</span><h3>PeerPay</h3><p>Interbank credit and settlement: onboarding, bank integration and disbursement services.</p><span class="url">peerpaynetwork.com</span></a>
+        <a class="product" href="https://swisspay.africa/" rel="noopener"><span class="tag">Payments</span><h3>SwissPay</h3><p>Tap-to-pay on any smartphone, with Kafka payment processing at 10,000+ tx/min.</p><span class="url">swisspay.africa</span></a>
+        <a class="product" href="https://shareholderlive.coronationregistrars.com/" rel="noopener"><span class="tag">Capital markets</span><h3>ShareholderLive</h3><p>Shareholder portfolios, dividends and share trading for a registrar.</p><span class="url">shareholderlive.coronationregistrars.com</span></a>
+        <a class="product" href="https://useriapp.com/" rel="noopener"><span class="tag">Agro-logistics</span><h3>Useri</h3><p>.NET backend, admin portal and Flutter app with on-device OCR.</p><span class="url">useriapp.com</span></a>
+        <a class="product" href="http://letsmeet.chat/" rel="noopener"><span class="tag">Social · events</span><h3>LetsMeet</h3><p>Real-time chat and proximity matchmaking on SignalR and PostgreSQL.</p><span class="url">letsmeet.chat</span></a>
+        <a class="product" href="https://virtual360mevtech.com/" rel="noopener"><span class="tag">E-learning</span><h3>Virtual360 MevTech</h3><p>Courses, subscriptions and CDN content delivery on .NET 8.</p><span class="url">virtual360mevtech.com</span></a>
+      </div>
+    </section>
+
+    <section id="stack" aria-labelledby="stack-h">
+      <p class="eyebrow">Tech stack</p>
+      <h2 id="stack-h">What I build with</h2>
+      <div class="skills">
+        <div class="skill-group"><h3>Languages &amp; frameworks</h3><div class="chips"><span class="chip">C#</span><span class="chip">.NET 8/9</span><span class="chip">ASP.NET Core</span><span class="chip">Entity Framework Core</span><span class="chip">Dapper</span><span class="chip">Blazor / Razor</span><span class="chip">SignalR</span><span class="chip">LINQ</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">PHP / Laravel</span><span class="chip">Django / Flask</span><span class="chip">Dart</span></div></div>
+        <div class="skill-group"><h3>Distributed systems</h3><div class="chips"><span class="chip">Microservices</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">gRPC</span><span class="chip">Temporal</span><span class="chip">Event sourcing</span><span class="chip">CQRS / DDD</span><span class="chip">Sagas</span><span class="chip">Idempotent APIs</span><span class="chip">API gateways</span><span class="chip">Multi-tenant SaaS</span><span class="chip">Hangfire</span></div></div>
+        <div class="skill-group"><h3>Data</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">Redis</span><span class="chip">Cassandra</span><span class="chip">TigerBeetle</span><span class="chip">MySQL / MariaDB</span><span class="chip">MongoDB</span><span class="chip">Elasticsearch</span><span class="chip">pgvector</span></div></div>
+        <div class="skill-group"><h3>Cloud &amp; DevOps</h3><div class="chips"><span class="chip">Azure</span><span class="chip">AKS</span><span class="chip">AWS</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Terraform</span><span class="chip">GitHub Actions</span><span class="chip">Azure DevOps</span><span class="chip">Serverless</span><span class="chip">Linux</span></div></div>
+        <div class="skill-group"><h3>Observability</h3><div class="chips"><span class="chip">OpenTelemetry</span><span class="chip">SigNoz</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Loki</span><span class="chip">Seq</span><span class="chip">Serilog</span><span class="chip">Sentry</span></div></div>
+        <div class="skill-group"><h3>Payments, banking &amp; security</h3><div class="chips"><span class="chip">Stripe</span><span class="chip">Paystack</span><span class="chip">Flutterwave</span><span class="chip">NIBSS / BVN</span><span class="chip">VFD</span><span class="chip">KYC / AML</span><span class="chip">OAuth2 / JWT</span><span class="chip">Encryption &amp; key rotation</span></div></div>
+        <div class="skill-group"><h3>AI &amp; automation</h3><div class="chips"><span class="chip">Claude Code</span><span class="chip">MCP</span><span class="chip">Multi-agent orchestration</span><span class="chip">LLM APIs</span><span class="chip">RAG</span><span class="chip">Ollama</span><span class="chip">Playwright</span><span class="chip">ML model deployment</span></div></div>
+        <div class="skill-group"><h3>Mobile &amp; frontend</h3><div class="chips"><span class="chip">Flutter</span><span class="chip">React</span><span class="chip">Angular</span><span class="chip">Vue</span><span class="chip">Electron</span><span class="chip">Tailwind</span><span class="chip">Bootstrap</span><span class="chip">Sass</span></div></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="cred-h">
+      <p class="eyebrow">Credentials</p>
+      <h2 id="cred-h">Certifications &amp; education</h2>
+      <div class="two">
+        <div class="panel">
+          <h3>Certifications</h3>
+          <ul>
+            <li><b>Microsoft Certified: Azure Developer Associate (AZ-204)</b></li>
+            <li>Microsoft .NET Development</li>
+            <li>IBM Software Development</li>
+            <li>Duke University (Coursera): Full-Stack Software Development</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Education &amp; practice</h3>
+          <ul>
+            <li><b>B.Sc. Computer Science</b>, University of Lagos</li>
+            <li>Clean Architecture · DDD / CQRS · event-driven design · TDD</li>
+            <li>Agile, Scrum and Kanban; leading teams of 20+ engineers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact" id="contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Hiring for backend, platform or fintech engineering?</h2>
+      <p>I'm open to senior backend and architecture roles, remote or with relocation. I usually reply within a day.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:dabirideji@gmail.com">dabirideji@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/uthman-dabiri-576339288" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://wa.me/2348142546500" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Uthman Ayodeji Dabiri · Built by hand, hosted on GitHub Pages</div>
+</footer>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
